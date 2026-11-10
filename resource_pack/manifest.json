@@ -1,0 +1,17 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "Adjustable Color Lantern Resources",
+    "description": "Resources for the adjustable RGB lantern.",
+    "uuid": "a3b2c4d5-e6f7-48a9-b0c1-d2e3f4a5b6c7",
+    "version": [1, 0, 0],
+    "min_engine_version": [1, 21, 80]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "f6e5d4c3-b2a1-4098-8765-43210fedcba9",
+      "version": [1, 0, 0]
+    }
+  ]
+}

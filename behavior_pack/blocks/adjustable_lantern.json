@@ -1,0 +1,56 @@
+{
+  "format_version": "1.21.80",
+  "minecraft:block": {
+    "description": {
+      "identifier": "adjustable_lantern:adjustable_lantern",
+      "menu_category": { "category": "items" },
+      "states": {
+        "minecraft:facing_direction": ["down", "up", "north", "south", "east", "west"]
+      }
+    },
+    "components": {
+      "minecraft:destructible_by_mining": { "seconds_to_destroy": 1.0 },
+      "minecraft:destructible_by_explosion": { "explosion_resistance": 3.5 },
+      "minecraft:friction": 0.6,
+      "minecraft:light_emission": 15,
+      "minecraft:light_dampening": 0,
+      "minecraft:map_color": "#D98B35",
+      "minecraft:geometry": { "identifier": "geometry.adjustable_lantern" },
+      "minecraft:selection_box": {
+        "origin": [-3, 0, -3],
+        "size": [6, 10, 6]
+      },
+      "minecraft:collision_box": {
+        "origin": [-3, 0, -3],
+        "size": [6, 10, 6]
+      },
+      "minecraft:material_instances": {
+        "*": { "texture": "adjustable_lantern", "render_method": "alpha_test" }
+      },
+      "minecraft:placement_direction": {
+        "enabled_states": ["minecraft:facing_direction"]
+      },
+      "minecraft:placement_filter": {
+        "conditions": [
+          { "allowed_faces": ["up", "down"] }
+        ]
+      }
+    },
+    "permutations": [
+      {
+        "condition": "q.block_state('minecraft:facing_direction') == 'down'",
+        "components": {
+          "minecraft:transformation": { "rotation": [180, 0, 0] },
+          "minecraft:selection_box": {
+            "origin": [-3, 6, -3],
+            "size": [6, 10, 6]
+          },
+          "minecraft:collision_box": {
+            "origin": [-3, 6, -3],
+            "size": [6, 10, 6]
+          }
+        }
+      }
+    ]
+  }
+}
